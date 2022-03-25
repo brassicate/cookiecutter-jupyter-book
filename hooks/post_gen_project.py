@@ -92,17 +92,17 @@ else:
     remove("{{cookiecutter.book_slug}}/_toc-legacy.yml")
 
 
-# Check existence of GitHub user, else raise warning
-if (
-    not requests.get(
-        "http://www.github.com/{{cookiecutter.github_username}}"
-    ).status_code
-    < 400
-):
-    _message_box(
-        "WARNING:\n"
-        "Could not find the user '{{cookiecutter.github_username}}' on github.com.\n"
-        "Please check the 'github_username' you entered.\n"
-        "If you are not using github.com you may ignore this warning.",
-        color="orange",
-    )
+# # Check existence of GitHub user, else raise warning
+# if (
+#     not requests.get(
+#         "http://www.github.com/{{cookiecutter.github_username}}"
+#     ).status_code
+#     < 400
+# ):
+#     _message_box(
+#         "WARNING:\n"
+#         "Could not find the user '{{cookiecutter.github_username}}' on github.com.\n"
+#         "Please check the 'github_username' you entered.\n"
+#         "If you are not using github.com you may ignore this warning.",
+#         color="orange",
+#     )
